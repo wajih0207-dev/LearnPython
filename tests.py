@@ -1,1 +1,1 @@
-print("This is Python")
+print("This is it")

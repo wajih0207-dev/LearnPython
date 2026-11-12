@@ -1,25 +1,21 @@
-import time
 
-print("This is the one before things.")
-print("Try doing the things do.")
-x = 1
-if x == 1:
-    print("things to do")
-y = 0
-z = 1
-try:
-    z/y
-except:
-    print("You can't devide by zero")
-    pass
+import customtkinter as ctk
 
-#while x < 50:
-#    print(x)
-#    x = x + 1
-#    time.sleep(0.05)
-print("This is the ",18," years old.")
+app = ctk.CTk()
+app.title("CustomTkinter Test")
+app.geometry("400x250")
 
-w, y, yi = "This", "is", "Things"
-print(w, end=" ")
-print(y, end=" ")
-print(yi, end=" ")
+label = ctk.CTkLabel(
+    app,
+    text="CustomTkinter is working!"
+)
+label.pack(pady=30)
+
+button = ctk.CTkButton(
+    app,
+    text="It works!",
+    command=lambda: print("Button clicked!")
+)
+button.pack(pady=10)
+
+app.mainloop()
